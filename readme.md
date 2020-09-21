@@ -29,7 +29,7 @@ The application should store the refresh token for future use and use the access
 ## Let's go to the code
 We will use the package "golang.org/x/oauth2" that provides support for making OAuth2 authorized and authenticated HTTP requests.
 
-Create a new project(folder) in your workdir in my case I will call it 'oauth2-example', and we need to include the package of oauth2.
+Create a new project(folder) in your workdir in my case I will call it 'go-oauth-example', and we need to include the package of oauth2.
 
 `go get golang.org/x/oauth2`
 
@@ -113,9 +113,6 @@ var googleOauthConfig = &oauth2.Config{
 
 This handler creates a login link and redirects the user to it:
 
-
-AuthCodeURL receive state that is a token to protect the user from CSRF attacks. You must
-always provide a non-empty string and validate that it matches with the state query parameter on your redirect callback, It's advisable that this is randomly generated for each request, that's why we use a simple cookie.
 	
 ```go
 func oauthGoogleLogin(w http.ResponseWriter, r *http.Request) {
