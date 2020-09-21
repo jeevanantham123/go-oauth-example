@@ -39,7 +39,7 @@ import (
 	"fmt"
 	"net/http"
 	"log"
-	"github.com/douglasmakey/oauth2-example/handlers"
+	"github.com/jeevanantham123/go-oauth-example/handlers"
 )
 
 func main() {
